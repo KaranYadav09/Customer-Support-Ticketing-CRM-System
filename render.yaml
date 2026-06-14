@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: support-ticket-crm-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 22.5.0
