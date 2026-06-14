@@ -38,7 +38,7 @@ export default function Register({ onLoginSuccess }) {
     const derivedName = emailName.charAt(0).toUpperCase() + emailName.slice(1);
 
     try {
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch(`${API_URL}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, name: derivedName }),
